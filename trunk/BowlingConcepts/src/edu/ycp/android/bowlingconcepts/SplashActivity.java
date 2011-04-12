@@ -1,4 +1,4 @@
-package edu.ycp.android.bowlingconepts;
+package edu.ycp.android.bowlingconcepts;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package edu.ycp.android.bowlingconepts;
+package edu.ycp.android.bowlingconcepts;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,7 @@ public class Catalog extends Activity{
 
 		catalogOptions = new ArrayList<String>();
 		catalogOptions.add(new String("Bowling Shirts"));
+		catalogOptions.add(new String("Blog"));
 		catalogOptions.add(new String("Billiard Shirts"));
 		catalogOptions.add(new String("Retro Polos"));
 
@@ -40,9 +41,14 @@ public class Catalog extends Activity{
 				{
 					Toast toast = Toast.makeText(Catalog.this, "Welcome to the Virtual Closet", Toast.LENGTH_SHORT);
 					toast.show();
-					finish();
+					//finish();
 					Intent myIntent = new Intent(Catalog.this, RotatingCube.class);
 					Catalog.this.startActivity(myIntent);
+				}
+				else if (position == 1)
+				{
+					Intent myIntent = new Intent(Catalog.this, BlogActivity.class);
+					startActivity(myIntent);
 				}
 				else
 				{
