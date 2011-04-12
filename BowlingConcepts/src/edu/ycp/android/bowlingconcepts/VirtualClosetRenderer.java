@@ -1,4 +1,4 @@
-package edu.ycp.android.bowlingconepts;
+package edu.ycp.android.bowlingconcepts;
 
 import java.io.IOException;
 import java.io.InputStream;

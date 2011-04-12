@@ -1,4 +1,4 @@
-package edu.ycp.android.bowlingconepts;
+package edu.ycp.android.bowlingconcepts;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,21 +18,21 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class HttpListener {
-	private URL url;
+	private URL feedurl;
 	private URLConnection conn;
 	private HttpURLConnection httpConn;
 	private LinkedList<ArrayList<String>> parsedXML;
 	
 	public HttpListener(URL url)
 	{
-		this.url = url;
+		this.feedurl = url;
 		parsedXML = new LinkedList<ArrayList<String>>();
 	}
 	
 	public void readSite()
 	{
 		try {
-			conn = url.openConnection();
+			conn = feedurl.openConnection();
 			httpConn = (HttpURLConnection) conn;
 			
 			int responseCode = httpConn.getResponseCode();
