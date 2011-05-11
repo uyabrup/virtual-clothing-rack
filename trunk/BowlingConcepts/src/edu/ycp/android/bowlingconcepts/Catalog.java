@@ -4,8 +4,11 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,10 +27,11 @@ public class Catalog extends Activity{
 
 		catalogOptions = new ArrayList<String>();
 		catalogOptions.add(new String("Bowling Shirts"));
-		catalogOptions.add(new String("Blog"));
 		catalogOptions.add(new String("Billiard Shirts"));
 		catalogOptions.add(new String("Retro Polos"));
-
+		
+		
+		
 		aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, catalogOptions);
 		ListView catalogListView = (ListView) findViewById(R.id.listview1);
 
@@ -45,17 +49,12 @@ public class Catalog extends Activity{
 					Intent myIntent = new Intent(Catalog.this, RotatingCube.class);
 					Catalog.this.startActivity(myIntent);
 				}
-				else if (position == 1)
-				{
-					Intent myIntent = new Intent(Catalog.this, BlogActivity.class);
-					startActivity(myIntent);
-				}
 				else
 				{
 					//TODO: Get Rid of this and add something useful in
 					AlertDialog.Builder alertTemp = new AlertDialog.Builder(Catalog.this);
-					alertTemp.setTitle("WOW");
-					alertTemp.setMessage("This is going to be finished and published!");
+					alertTemp.setTitle("Content not here");
+					alertTemp.setMessage("TO DO: Add in Content");
 					alertTemp.setPositiveButton("OK", null);
 					alertTemp.show();
 				}
