@@ -47,8 +47,12 @@ public class TouchGLSurfaceView extends GLSurfaceView {
 			return true;
 		}
 	}
+
+	public float getAngle()
+	{
+		return mCubeRender.mAngle;
+	}
 	private VirtualClosetRenderer mCubeRender;
 	private float endX;
 	private static final float TOUCH_SCALE_FACTOR = 1.0f/320.0f;
-
 }

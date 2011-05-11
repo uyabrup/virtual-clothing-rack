@@ -166,8 +166,6 @@ public class VirtualClosetRenderer implements GLSurfaceView.Renderer {
 	
 	public void loadTexture(GL10 gl, int[] textureptr,  int textureLocation, int offset, int sizeX, int sizeY)
 	{
-		//int count = 0;
-		//for(int i : textureLocation){
 			InputStream is = mContext.getResources().openRawResource(textureLocation);
 			Bitmap bitmap = null;
 

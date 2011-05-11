@@ -26,7 +26,7 @@ public class SplashActivity extends Activity {
 					
 				}finally{
 					finish();
-					Intent myIntent = new Intent(SplashActivity.this, Catalog.class);
+					Intent myIntent = new Intent(SplashActivity.this, Categories.class);
 					SplashActivity.this.startActivity(myIntent);
 				}
 			}
