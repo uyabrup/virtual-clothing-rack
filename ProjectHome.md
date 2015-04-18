@@ -1,0 +1,1 @@
+An Android app that simulates clothing on a rack for displaying the catalog of a clothing company.
